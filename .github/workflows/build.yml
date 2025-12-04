@@ -87,13 +87,17 @@ jobs:
         ln -sfn "$ANDROID_SDK_ROOT" ~/.buildozer/android/platform/android-sdk
         ln -sfn "$ANDROID_NDK_HOME" ~/.buildozer/android/platform/android-ndk
 
-        # فقط اگر مسیر مقصد وجود نداره، کپی کن
         if [ ! -d ~/.buildozer/android/platform/android-sdk/build-tools/33.0.2 ]; then
           mkdir -p ~/.buildozer/android/platform/android-sdk/build-tools
           cp -r $ANDROID_SDK_ROOT/build-tools/33.0.2 ~/.buildozer/android/platform/android-sdk/build-tools/
         fi
 
         ls -la ~/.buildozer/android/platform/android-sdk/build-tools/
+
+    - name: Clone python-for-android manually
+      run: |
+        mkdir -p ~/.buildozer/android/platform
+        git clone https://github.com/kivy/python-for-android.git ~/.buildozer/android/platform/python-for-android
 
     - name: Build APK (debug)
       env:
