@@ -96,7 +96,7 @@ jobs:
 
     - name: Clone python-for-android manually
       run: |
-        mkdir -p ~/.buildozer/android/platform
+        rm -rf ~/.buildozer/android/platform/python-for-android
         git clone https://github.com/kivy/python-for-android.git ~/.buildozer/android/platform/python-for-android
 
     - name: Build APK (debug)
