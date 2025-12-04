@@ -92,8 +92,6 @@ jobs:
           cp -r $ANDROID_SDK_ROOT/build-tools/33.0.2 ~/.buildozer/android/platform/android-sdk/build-tools/
         fi
 
-        ls -la ~/.buildozer/android/platform/android-sdk/build-tools/
-
     - name: Clone python-for-android manually
       run: |
         rm -rf ~/.buildozer/android/platform/python-for-android
