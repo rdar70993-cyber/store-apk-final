@@ -54,10 +54,11 @@ jobs:
         mkdir -p ~/.buildozer/android/platform
         cd ~/.buildozer/android/platform
         wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O cmdtools.zip
-        unzip -q cmdtools.zip
+        unzip -q cmdtools.zip -d cmdline-tools
         mkdir -p cmdline-tools/latest
-        mv cmdline-tools/* cmdline-tools/latest/ || true
+        mv cmdline-tools/cmdline-tools/* cmdline-tools/latest/
         export PATH=$PWD/cmdline-tools/latest/bin:$PATH
+        mkdir -p ~/.android
         touch ~/.android/repositories.cfg
         yes | sdkmanager --licenses
         sdkmanager --verbose --no_https \
