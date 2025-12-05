@@ -106,7 +106,6 @@ jobs:
         ANDROID_NDK_HOME: ${{ github.workspace }}/android-ndk
       timeout-minutes: 40
       run: |
-        buildozer android clean
         buildozer android debug
 
     - name: Upload APK
