@@ -11,7 +11,7 @@ fullscreen = 1
 
 [buildozer]
 log_level = 2
-p4a_dir = /home/runner/.buildozer/android/platform/python-for-android
+p4a_dir = /home/runner/work/store-apk-final/store-apk-final/.buildozer/android/platform/python-for-android
 
 [android]
 android.api = 33
