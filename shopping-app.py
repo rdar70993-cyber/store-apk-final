@@ -1,14 +1,9 @@
 from kivy.app import App
-from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
 
-class ShoppingApp(App):
+class StoreApp(App):
     def build(self):
-        layout = BoxLayout(orientation='vertical')
-        layout.add_widget(Button(text="Add to Cart"))
-        layout.add_widget(Button(text="Checkout"))
-        layout.add_widget(Button(text="View Orders"))
-        return layout
+        return Label(text="Welcome to Store AP")
 
-if __name__ == "__main__":
-    ShoppingApp().run()
+if __name__ == '__main__':
+    StoreApp().run()
