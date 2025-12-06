@@ -70,7 +70,8 @@ jobs:
     - name: Fix sdkmanager path for Buildozer
       run: |
         mkdir -p ~/.buildozer/android/platform/android-sdk/tools/bin
-        ln -s ~/.buildozer/android/platform/cmdline-tools/latest/bin/sdkmanager ~/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager
+        ln -sf ~/.buildozer/android/platform/cmdline-tools/latest/bin/sdkmanager ~/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager
+        ln -sf ~/.buildozer/android/platform/cmdline-tools/latest/bin/android ~/.buildozer/android/platform/android-sdk/tools/bin/android || true
 
     - name: Add AIDL to PATH
       run: |
