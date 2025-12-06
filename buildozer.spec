@@ -20,4 +20,4 @@ android.ndk = 21b
 android.build_tools_version = 30.0.3
 android.arch = armeabi-v7a
 android.permissions = INTERNET
-android.sdk_path = $HOME/.buildozer/android/platform/android-sdk
+android.sdk_path = $HOME/.buildozer/android/platform/android_sdk
