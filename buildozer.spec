@@ -36,5 +36,5 @@ android.build_tools_version = 30.0.3
 android.arch = armeabi-v7a
 # دسترسی‌ها
 android.permissions = INTERNET
-# مسیر SDK (خیلی مهم برای رفع ارور)
+# مسیر SDK (خیلی مهم برای رفع ارورهای sdkmanager)
 android.sdk_path = $HOME/.buildozer/android/platform/android-sdk
