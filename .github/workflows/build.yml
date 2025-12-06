@@ -67,6 +67,11 @@ jobs:
           "build-tools;30.0.3" \
           "ndk;21.4.7075529"
 
+    - name: Fix sdkmanager path for Buildozer
+      run: |
+        mkdir -p ~/.buildozer/android/platform/android-sdk/tools/bin
+        ln -s ~/.buildozer/android/platform/cmdline-tools/latest/bin/sdkmanager ~/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager
+
     - name: Add AIDL to PATH
       run: |
         echo "$HOME/.buildozer/android/platform/build-tools/30.0.3" >> $GITHUB_PATH
