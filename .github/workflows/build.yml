@@ -71,6 +71,12 @@ jobs:
       run: |
         echo "$HOME/.buildozer/android/platform/build-tools/30.0.3" >> $GITHUB_PATH
 
+    - name: Force Buildozer to use correct build-tools
+      run: |
+        mkdir -p ~/.buildozer/android/platform/android-sdk/build-tools
+        cp -r ~/.buildozer/android/platform/build-tools/30.0.3 ~/.buildozer/android/platform/android-sdk/build-tools/
+        export PATH=$HOME/.buildozer/android/platform/build-tools/30.0.3:$PATH
+
     - name: Clone python-for-android manually
       run: |
         rm -rf ~/.buildozer/android/platform/python-for-android
